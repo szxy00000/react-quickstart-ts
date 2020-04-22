@@ -7,7 +7,8 @@ shellpath=$(dirname $0)
 path=${shellpath%/template}
 compName=$1
 CompName="$(tr '[:lower:]' '[:upper:]' <<< ${compName:0:1})${compName:1}"
-if [ -e /path/to/file ];then echo "creating";else echo "page exist" && exit 0;fi
+echo $path/src/reducers/$compName.ts
+if [ ! -f $path/src/reducers/$compName.ts ];then echo "creating";else echo "page exist" && exit 0;fi
 mkdir $path/src/pages/$CompName
 cp $path/template/templateReducer.ts $path/src/reducers/$compName.ts
 sed -i "" "s/template/$compName/g" $path/src/reducers/$compName.ts
