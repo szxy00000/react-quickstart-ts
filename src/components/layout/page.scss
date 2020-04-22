@@ -1,0 +1,29 @@
+@import '~vars';
+.page {
+    position: relative;
+    overflow: auto;
+    height: 100%;
+    .page-cont {
+        padding: 0 $base_size;
+    }
+    .page-loading {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        font-size: 30px;
+    }
+    .page-error {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $color_font_gray;
+    }
+}
