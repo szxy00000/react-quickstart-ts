@@ -1,4 +1,4 @@
-import * as pure from "pures/template";
+// import * as pure from "pures/template";
 import axios from "axios";
 
 export const UPDATE_template_PROPS = Symbol("UPDATE_template_PROPS");

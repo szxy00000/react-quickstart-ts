@@ -8,7 +8,7 @@ import "./template.less";
 
 export interface templatePageProps extends RouteConfigComponentProps {}
 
-export const templatePage: React.SFC<templatePageProps> = (props) => {
+export const TemplatePage: React.SFC<templatePageProps> = (props) => {
   const dispatch = useDispatch();
   const { templateProps } = useSelector<StoreState, templateState>(
     (state) => state.template
