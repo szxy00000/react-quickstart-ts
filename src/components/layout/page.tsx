@@ -19,7 +19,7 @@ export const Page: React.SFC<PageProps> = props => {
   if (!route) return null;
 
   return (
-    <div className="page">
+    <div className={"page page-" + name}>
       <Header title={route.title} menu={menu}></Header>
 
       <div>
