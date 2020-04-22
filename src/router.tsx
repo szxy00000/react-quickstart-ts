@@ -18,7 +18,13 @@ export const Config: RouteConfig[] = [
         path: "/demo",
         id: "3",
         component: pages.DemoPage,
-      },
+      },/*
+      {
+        title: "template",
+        path: "/template",
+        id: "3",
+        component: pages.templatePage,
+      }*/
     ],
   },
 ];
