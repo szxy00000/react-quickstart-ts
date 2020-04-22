@@ -22,7 +22,7 @@ export const Config: RouteConfig[] = [
       {
         title: "template",
         path: "/template",
-        id: "3",
+        id: "template",
         component: pages.templatePage,
       }*/
     ],

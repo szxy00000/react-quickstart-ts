@@ -30,7 +30,7 @@ route = route.replace(
       {
         title: "template",
         path: "/template",
-        id: "3",
+        id: "template",
         component: pages.templatePage,
       }*/`,
   `{
