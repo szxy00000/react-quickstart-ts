@@ -18,6 +18,11 @@ export const Config: RouteConfig[] = [
         path: "/demo",
         id: "3",
         component: pages.DemoPage,
+      },{
+        title: "crmhome",
+        path: "/crmhome",
+        id: "3",
+        component: pages.CrmhomePage,
       },/*
       {
         title: "template",
