@@ -3,14 +3,14 @@ import { RouteConfigComponentProps } from "react-router-config";
 import { Page } from "components";
 import { useDispatch, useSelector } from "react-redux";
 import { templateActions } from "actions";
-import { StoreState, demoState } from "reducers";
-import "./demo.scss";
+import { StoreState, templateState } from "reducers";
+import "./template.less";
 
 export interface templatePageProps extends RouteConfigComponentProps {}
 
 export const templatePage: React.SFC<templatePageProps> = (props) => {
   const dispatch = useDispatch();
-  const { templateProps } = useSelector<StoreState, demoState>(
+  const { templateProps } = useSelector<StoreState, templateState>(
     (state) => state.template
   );
 
@@ -20,12 +20,12 @@ export const templatePage: React.SFC<templatePageProps> = (props) => {
         onClick={() => {
           dispatch(
             templateActions.updateProps({
-              test: templateProps.test + 1,
+              demo: templateProps.demo + 1,
             })
           );
         }}
       >
-        {templateProps.test}
+        {templateProps.demo}
       </div>
     </Page>
   );
