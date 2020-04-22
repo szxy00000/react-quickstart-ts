@@ -4,7 +4,7 @@
 import * as React from "react";
 import * as echarts from "echarts";
 // import { Loading } from "antd";
-import "./chart.scss";
+import "./chart.less";
 
 export type ChartOptions = echarts.EChartOption;
 

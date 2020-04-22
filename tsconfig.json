@@ -20,7 +20,7 @@
     "allowJs": false,
     "noImplicitAny": false
   },
-  "exclude": ["node_modules", "test"],
+  "exclude": ["node_modules", "test", "template"],
   "awesomeTypescriptLoaderOptions": {
     "useWebpackText": true,
     "useTranspileModule": true,

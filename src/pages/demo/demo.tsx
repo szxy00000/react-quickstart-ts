@@ -4,7 +4,7 @@ import { Page } from "components";
 import { useDispatch, useSelector } from "react-redux";
 import { demoActions } from "actions";
 import { StoreState, demoState } from "reducers";
-import "./demo.scss";
+import "./demo.less";
 
 export interface DemoPageProps extends RouteConfigComponentProps { }
 

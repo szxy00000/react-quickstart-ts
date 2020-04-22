@@ -5,7 +5,7 @@ import * as React from 'react';
 import { RouteConfigComponentProps } from 'react-router-config';
 import { Header } from './header';
 
-import './page.scss';
+import "./page.less";
 
 export interface PageProps extends RouteConfigComponentProps {
   name: string;

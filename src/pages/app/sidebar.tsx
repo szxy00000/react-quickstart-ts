@@ -6,7 +6,7 @@ import { Storage } from "services";
 import { useDispatch } from "react-redux";
 import { RouteConfigComponentProps } from "react-router-config";
 
-import "./sidebar.scss";
+import "./sidebar.less";
 
 export interface SidebarProps extends RouteConfigComponentProps {
   

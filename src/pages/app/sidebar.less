@@ -1,8 +1,6 @@
-@import "~vars";
-$width: 60px;
 .sidebar {
-  width: $width;
-  flex: 0 0 $width;
+  width: 60px;
+  flex: 0 0 60px;
   background: #243c60;
   display: flex;
   flex-direction: column;
@@ -12,36 +10,26 @@ $width: 60px;
     border: none;
   }
   .logo {
-    padding-top: $base_size / 2;
     padding-bottom: 60px;
     a {
       font-size: 36px;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: $width;
+      height: 60px;
     }
   }
   .nav {
     li {
       a {
         display: flex;
-        height: $width;
-        width: $width;
+        height: 60px;
+        width: 60px;
         align-items: center;
         justify-content: center;
         font-size: 26px;
-        color: rgba($color: #ffffff, $alpha: 0.4);
         transition: 0.3s;
         background: none;
-        &:hover,
-        &.active {
-          color: $color_orange;
-          transition: 0.3s;
-        }
-        &:hover {
-          background: rgba($color: $color_orange, $alpha: 0.2);
-        }
       }
     }
   }
@@ -50,22 +38,13 @@ $width: 60px;
     background: #243c60;
     li {
       display: flex;
-      height: $width;
-      width: $width;
+      height: 60px;
+      width: 60px;
       align-items: center;
       justify-content: center;
       font-size: 26px;
-      color: rgba($color: #ffffff, $alpha: 0.4);
       transition: 0.3s;
       background: none;
-      &:hover,
-      &.active {
-        color: $color_orange;
-        transition: 0.3s;
-      }
-      &:hover {
-        background: rgba($color: $color_orange, $alpha: 0.2);
-      }
       .ant-menu-submenu-title > i {
         font-size: 26px;
       }

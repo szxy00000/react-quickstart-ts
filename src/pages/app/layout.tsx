@@ -4,7 +4,7 @@ import { renderRoutes, RouteConfigComponentProps } from "react-router-config";
 import { Sidebar } from "./sidebar";
 import { useDispatch, useSelector } from "react-redux";
 
-import "./layout.scss";
+import "./layout.less";
 
 interface LayoutProps extends RouteConfigComponentProps {}
 

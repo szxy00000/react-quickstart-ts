@@ -2,7 +2,7 @@
  * 头部
  */
 import * as React from 'react';
-import './header.scss';
+import "./header.less";
 
 export interface HeaderProps {
   title: string;
