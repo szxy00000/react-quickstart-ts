@@ -16,9 +16,16 @@ export const Config: RouteConfig[] = [
       {
         title: "demo",
         path: "/demo",
-        id: "3",
-        component: pages.DemoPage,
-      },/*
+        id: "demo",
+        component: React.lazy(() =>
+          import("pages/demo").then(
+            ({ DemoPage }) => ({
+              default: DemoPage
+            })
+          )
+        ),
+      },
+      /*
       {
         title: "template",
         path: "/template",
