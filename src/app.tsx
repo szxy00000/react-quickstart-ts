@@ -5,12 +5,15 @@ import { renderRoutes } from "react-router-config";
 import { Config } from "router";
 import { Provider } from "react-redux";
 import { store } from "store";
+import { Spin } from "antd";
 
 export const App = () => {
   return (
     <React.Fragment>
       <Provider store={store}>
-        <HashRouter>{renderRoutes(Config)}</HashRouter>
+        <React.Suspense fallback={<Spin />}>
+          <HashRouter>{renderRoutes(Config)}</HashRouter>
+        </React.Suspense>
       </Provider>
     </React.Fragment>
   );

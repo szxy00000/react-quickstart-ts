@@ -1,4 +1,4 @@
-let fs = require('fs');
+let fs = require("fs");
 let reducer = fs.readFileSync("./src/reducers/index.ts").toString();
 reducer = reducer
   .replace(
@@ -26,24 +26,29 @@ fs.writeFileSync("./src/pages/index.ts", page);
 
 let route = fs.readFileSync("./src/router.tsx").toString();
 route = route.replace(
-  `/*
-      {
+  `      /* {
         title: "template",
         path: "/template",
         id: "template",
         component: pages.templatePage,
-      }*/`,
-  `{
+      } */`,
+  `      {
         title: "${process.argv[2]}",
         path: "/${process.argv[2]}",
         id: "3",
-        component: pages.${process.argv[3]}Page,
-      },/*
-      {
+        component: React.lazy(() =>
+          import("pages/${process.argv[2]}").then(
+            ({ ${process.argv[3]}Page }) => ({
+              default: ${process.argv[3]}Page
+            })
+          )
+        ),
+      }, 
+      /* {
         title: "template",
         path: "/template",
-        id: "3",
+        id: "template",
         component: pages.templatePage,
-      }*/`
+      } */`
 );
 fs.writeFileSync("./src/router.tsx", route);
