@@ -42,6 +42,10 @@ yarn start
         },
        ```
 
+##### 开发建议：
+ - 由component自己生成，并只给自己使用的数据，用 react state 管理，其余全部去store
+ - 由于 store 为统一的merge更新操作，要求数据扁平，无法扁平化的数据需要增加reducer（偏平数据能覆盖大于80%的场景）
+
 ### 附带快速新增页面工具：
 ``` npm run page $pagename ```  $pagename为要新增页面的名称
 运行命令后会生成符合上述逻辑的页面，直接浏览器访问路由 $pagename 即可
