@@ -21,7 +21,7 @@ action += `\r\nexport * from "./${process.argv[2]}";`;
 fs.writeFileSync("./src/actions/index.ts", action);
 
 let page = fs.readFileSync("./src/pages/index.ts").toString();
-page += `\r\nexport * from "./${process.argv[2]}";`;
+page += `\r\nexport * from "./${process.argv[3]}";`;
 fs.writeFileSync("./src/pages/index.ts", page);
 
 let route = fs.readFileSync("./src/router.tsx").toString();
@@ -35,9 +35,9 @@ route = route.replace(
   `      {
         title: "${process.argv[2]}",
         path: "/${process.argv[2]}",
-        id: "3",
+        id: "${process.argv[2]}",
         component: React.lazy(() =>
-          import("pages/${process.argv[2]}").then(
+          import("pages/${process.argv[3]}").then(
             ({ ${process.argv[3]}Page }) => ({
               default: ${process.argv[3]}Page
             })

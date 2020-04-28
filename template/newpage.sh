@@ -15,7 +15,7 @@ cp $path/template/template.tsx $path/src/pages/$CompName/$CompName.tsx
 sed -i "" "s/template/$compName/g" $path/src/pages/$CompName/$CompName.tsx
 sed -i "" "s/Template/$CompName/g" $path/src/pages/$CompName/$CompName.tsx
 cp $path/template/index.ts $path/src/pages/$CompName/index.ts
-sed -i "" "s/template/$compName/g" $path/src/pages/$CompName/index.ts
+sed -i "" "s/template/$CompName/g" $path/src/pages/$CompName/index.ts
 cp $path/template/template.less $path/src/pages/$compName/$compName.less
 sed -i "" "s/template/$compName/g" $path/src/pages/$compName/$compName.less
 cp $path/template/templateAction.ts $path/src/actions/$compName.ts
