@@ -8,17 +8,6 @@ export default merge(Base, {
 
   mode: 'production',
 
-  devtool: 'source-map',
-
-  module: {
-    rules: [
-      {
-        test: /.s?css$/,
-        use: [miniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-      },
-    ],
-  },
-
   output: {
     publicPath: 'http://10.96.83.6:8009',
   },

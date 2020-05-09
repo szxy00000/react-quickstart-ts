@@ -22,19 +22,6 @@ export default merge(Base, {
     host: "0.0.0.0"
   },
 
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
-      },
-      {
-        test: /\.less$/,
-        use: ["style-loader", "css-loader", "less-loader"]
-      },
-    ]
-  },
-
   resolve: {
     alias: {
       "react-dom": "@hot-loader/react-dom"

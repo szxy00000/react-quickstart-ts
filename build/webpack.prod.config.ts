@@ -7,17 +7,6 @@ import { Base, Root } from "./webpack.base.config";
 export const Prod = merge(Base, {
   mode: "production",
 
-  devtool: "source-map",
-
-  module: {
-    rules: [
-      {
-        test: /.s?css$/,
-        use: [miniCssExtractPlugin.loader, "css-loader", "sass-loader"]
-      }
-    ]
-  },
-
   output: {
     publicPath: "/"
   },
@@ -43,15 +32,6 @@ const Pre = merge(Base, {
   mode: "production",
 
   devtool: "source-map",
-
-  module: {
-    rules: [
-      {
-        test: /.s?css$/,
-        use: [miniCssExtractPlugin.loader, "css-loader", "sass-loader"]
-      }
-    ]
-  },
 
   output: {
     publicPath: "/"
