@@ -25,13 +25,12 @@ export const Config: RouteConfig[] = [
           )
         ),
       },
-      /*
-      {
+      /* {
         title: "template",
         path: "/template",
         id: "template",
         component: pages.templatePage,
-      }*/
+      } */
     ],
   },
 ];
